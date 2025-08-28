@@ -1,7 +1,6 @@
 from strands.tools import tool
 from ddgs.exceptions import DDGSException, RatelimitException
 from ddgs import DDGS
-from strands.tools import tool
 from strands_tools import retrieve
 
 MODEL_ID = "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
