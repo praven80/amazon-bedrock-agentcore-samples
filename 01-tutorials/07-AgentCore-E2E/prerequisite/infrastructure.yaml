@@ -822,7 +822,22 @@ Resources:
                 Resource: !Sub 'arn:aws:bedrock:${AWS::Region}::foundation-model/amazon.titan-embed-text-v2:0'
               - Effect: Allow
                 Action:
-                  - s3vectors:*
+                  - s3vectors:ListVectorBuckets
+                  - s3vectors:ListVectors
+                  - s3vectors:ListIndexes
+                  - s3vectors:GetVectorBucket
+                  - s3vectors:GetVectors
+                  - s3vectors:GetIndex
+                  - s3vectors:PutVectorBucketPolicy
+                  - s3vectors:PutVectors
+                  - s3vectors:CreateVectorBucket
+                  - s3vectors:CreateIndex
+                  - s3vectors:QueryVectors
+                  - s3vectors:GetVectorBucketPolicy
+                  - s3vectors:DeleteVectorBucketPolicy
+                  - s3vectors:DeleteVectors
+                  - s3vectors:DeleteVectorBucket
+                  - s3vectors:DeleteIndex
                 Resource: '*'
 
   # Lambda function with technical documentation content
