@@ -458,6 +458,7 @@ def create_agentcore_runtime_execution_role():
                     "bedrock:InvokeModel",
                     "bedrock:InvokeModelWithResponseStream",
                     "bedrock:ApplyGuardrail",
+                    "bedrock:Retrieve"
                 ],
                 "Resource": [
                     "arn:aws:bedrock:*::foundation-model/*",
@@ -481,7 +482,7 @@ def create_agentcore_runtime_execution_role():
                 "Effect": "Allow",
                 "Action": ["ssm:GetParameter"],
                 "Resource": [
-                    f"arn:aws:ssm:{region}:{account_id}:parameter/app/customersupport/agentcore/memory_id"
+                    f"arn:aws:ssm:{region}:{account_id}:parameter/*"
                 ],
             },
         ],
